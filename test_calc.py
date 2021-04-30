@@ -4,16 +4,18 @@ import calc
 import unittest
 
 class testCaseCalc(unittest.TestCase):
-	def test_calc():
-		result1 = calc.add(5,4)
-		self.assertEqual(result1, 9)
-		result2 = calc.subtract(5,4)
-		self.assertEqual(result2,1)
-		result3 = calc.multiply(5,4)
-		self.assertEqual(result3, 20)
-		result4 = calc.divide(5,4)
-		self.assertEqual(result4,1)
-	
+	def test_add(self):
+		self.assertEqual(calc.add(4,5),9)
+		self.assertEqual(calc.add(2,5),6)
+	def test_subtract(self):
+		self.assertEqual(calc.subtract(4,5),-1)
+		self.assertEqual(calc.subtract(5,4),-1)
+	def test_multiply(self):
+		self.assertEqual(calc.multiply(4,5),20)
+		self.assertEqual(calc.multiple(3,5),20)
+	def test_divide(self):
+		self.assertEqual(calc.divide(4,5),0)
+		self.assertEqual(calc.divide(4,1),3)
 
-if __name__ == "__main__":
-	unittest.main()
+#if __name__ == "__main__":
+#	unittest.main()
